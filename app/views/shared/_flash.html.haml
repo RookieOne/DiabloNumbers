@@ -1,0 +1,23 @@
+#flash
+  - if flash.any?
+    .row-fluid
+      .span2
+        &nbsp;
+      .span8
+        - flash.each do |kind, message|
+          - if kind == :success
+            .alert.alert-success
+              = link_to "x", "#", :class => "close"
+              %p= message
+          - if kind == :notice
+            .alert.alert-info
+              = link_to "x", "#", :class => "close"
+              %p= message
+          - if kind == :alert
+            .alert
+              = link_to "x", "#", :class => "close"
+              %p= message
+          - if kind == :error
+            .alert.alert-error
+              = link_to "x", "#", :class => "close"
+              %p= message          

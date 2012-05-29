@@ -9,6 +9,10 @@ gem "simple_form", "2.0.0"
 gem "rabl"
 gem "rails-backbone"
 
+# Server
+gem "foreman"
+gem 'thin', "1.2.11"
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -17,6 +21,14 @@ end
 
 group :development, :test do
   gem 'sqlite3'
+end
+
+group :development do  
+  gem "heroku_san", "1.3.0"
+end
+
+group :production do
+  gem 'pg', "0.11.0"
 end
 
 group :test do
