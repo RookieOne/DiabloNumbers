@@ -1,0 +1,45 @@
+.page-header
+  %h1 Damage Reduction from Armor
+  
+.row
+  .span12
+    
+    .alert.alert-info
+      This information is a direct copy from a post by TBD in the Diablo 3 forums. You can see the original post
+      = link_to "here", "http://us.battle.net/d3/en/forum/topic/5149150485"
+      = "."
+    .well
+      %h3 DR from Armor = Armor / ( Armor + (50 * mLvl) )
+      %p
+        As you can see, there is a constant in the bottom (50*mLvl). Armor is being divided by (Armor + 3000). It will always approach but never reach 1 because Armor can never be greater than or equal to (Armor + positive integer).
+
+.row
+  .span4
+    = link_to "http://i50.tinypic.com/1pgtaf.jpg", :target => "_blank" do
+      = image_tag "http://i50.tinypic.com/1pgtaf.jpg"
+  .span6.dr_chart_description
+    %p
+      As you can see, there is a constant in the bottom (50*mLvl). Armor is being divided by (Armor + 3000). It will always approach but never reach 1 because Armor can never be greater than or equal to (Armor + positive integer).
+    %p
+      The graph shows that as armor increases, additional points in armor yield less and less DR. Most people call this diminishing returns and explain that the more armor you have the less additional armor is worth. That is wrong. 
+
+.row
+  .span4
+    = link_to "http://i47.tinypic.com/21d1u87.jpg", :target => "_blank" do
+      = image_tag "http://i47.tinypic.com/21d1u87.jpg"
+  .span6.dr_chart_description
+    %p
+      The reason it is wrong is because the effect of each additional point of DR is more powerful than the last. So in order to keep the effectiveness of armor linear, each point must must yield less damage reduction because each point of damage reduction is more effective than the last.
+.row
+  .span4  
+    = link_to "http://i49.tinypic.com/20ge53r.jpg", :target => "_blank" do
+      = image_tag "http://i49.tinypic.com/20ge53r.jpg"
+  .span6.dr_chart_description
+    %p
+      To further illustrate my last point lets look at an example:
+      At 70% DR you have an effective health of 333.3%, increase over last = 10.8%
+      At 71% DR you have an effective health of 344.8%, increase over last = 11.5%
+      At 72% DR you have an effective health of 357.1%, increase over last = 12.3%
+      = "..."
+      At 95% DR you have an effective health of 2000%, increase over last = 333.35%
+      At 96% DR you have an effective health of 2500%, increase over last = 500%    

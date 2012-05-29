@@ -12,6 +12,10 @@
         to see where I am getting the information.
 
 .row
+  .span12    
+    = render :partial => "topics/topics"
+
+.row
   .span3 
     %h3 Vitality
 
@@ -73,6 +77,10 @@
             %span.label all resist                         
   .clearfix
 
+%hr
+
 = render "experience"
+
+%hr
 
 = render "group_mechanics"
