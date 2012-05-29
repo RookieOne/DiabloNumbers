@@ -1,9 +1,10 @@
-.fluid-row
+.row
   .span12
     %h2 
       Group Mechanics
       %small more is better
-
+    .clearfix
+.row
   - @group_mechanics.each_pair do |name, values|
     .span3
       %table.table.table-striped.table-condensed
