@@ -1,0 +1,27 @@
+.row
+  .span12
+    %h1 
+      Definitions
+      %small what things mean
+
+    %dl
+      %dt Armor
+      %dd Armor gives you % damage reduction against all types of damage, not just physical. It is increased by armor value on items, strength (1:1) and certain skills.
+
+      %dt Diminishing Returns
+      %dd The idea that an extra point in something (Armor) yields less return than the points before it. Ex. the 100 point in armor is less effective than the 99th point.
+
+      %dt Effective Health
+      %dd 
+        Effective health is the amount of damage it takes to kill you (not to be confused with max health). If you have 1000 max health and 25% damage reduction, you have an effective health of 1333. You 
+        can determine your effective health by the following formula: MaxHealth/(1-DamageReduction)
+        %br
+        %br
+        %p
+          This is where a lot of people get confused. Having 50% damage reduction does not allow you to take 50% more damage, it's a lot more than that. Consider this scenario: You have 1000 max health and 50% damage reduction. A monster is hitting you for 100 unmitigated damage, which only does 50 damage to you because you have 50% DR. It will take that monster 20 hits to kill you (1000 HP / 50 dmg) which means you can actually take 2,000 unmitigated damage (20 hits * 100 dmg). So with 50% DR you have 200% effective health, not 150%.
+
+      %dt Monster Level (mLvl)
+      %dd Stands for monster level. The level of the monster you're fighting.
+      
+      %dt Damage Reduction (DR)
+      %dd Damage reduced (from armor).
