@@ -1,5 +1,28 @@
 
 .fluid-row
+  .span3 
+    %h3 Vitality
+
+    %table.table.table-striped.table-condensed
+      %tbody
+        %tr
+          %td
+            < Level 35            
+          %td.output_cell
+            36 + 4 x 
+            %span.label level
+            + 10 x
+            %span.label.label-success vitality
+        %tr
+          %td >=Level 35            
+          %td.output_cell
+            (
+            %span.label level
+            = "- 25"
+            )
+            x
+            %span.label.label-success vitality            
+
   .span3
     %h3 Armor
 
