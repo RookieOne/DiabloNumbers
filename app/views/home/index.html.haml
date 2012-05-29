@@ -16,66 +16,15 @@
     = render :partial => "topics/topics"
 
 .row
-  .span3 
-    %h3 Vitality
+  = render "vitality"
 
-    %table.table.table-striped.table-condensed
-      %tbody
-        %tr
-          %td
-            < Level 35            
-          %td.output_cell
-            36 + 4 x 
-            %span.label level
-            + 10 x
-            %span.label.label-success vitality
-        %tr
-          %td >=Level 35            
-          %td.output_cell
-            (
-            %span.label level
-            = "- 25"
-            )
-            x
-            %span.label.label-success vitality            
-
-  .span3
-    %h3 Armor
-
-    %table.table.table-striped.table-condensed
-      %tbody
-        %tr
-          %td
-            1 
-            %span.label.label-important strength
-          %td.output_cell
-            %i.icon-arrow-up
-            1          
-            %span.label.label-inverse armor  
-        %tr
-          %td
-            1 
-            %span.label all resist
-          %td.output_cell
-            %i.icon-arrow-up
-            10          
-            %span.label.label-inverse armor       
-
-
-  .span3
-    %h3 Resists
-
-    %table.table.table-striped.table-condensed
-      %tbody
-        %tr
-          %td
-            1 
-            %span.label.label-info intelligence
-          %td.output_cell
-            %i.icon-arrow-up
-            = ".1"
-            %span.label all resist                         
-  .clearfix
+.row
+  = render "resists"
+  = render "dr_from_resists"  
+  
+.row
+  = render "armor"
+  = render "dr_from_armor"
 
 %hr
 

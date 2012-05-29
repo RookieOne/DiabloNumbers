@@ -1,0 +1,25 @@
+
+
+.span4 
+  %h3 Damage Reduction from Resists
+
+  %table.table.table-striped.table-condensed
+    %tbody
+      %tr
+        %td
+          %span.label.label-inverse resist
+          = "/"
+          (
+          %span.label.label-inverse resist
+          = " + ( 5 * "
+          %span.label monster level
+          ) )
+      %tr
+        %td
+          %span.label.label-info intelligence
+          = "/"
+          (
+          %span.label.label-info intelligence
+          = " + ( 50 * "
+          %span.label monster level
+          ) )

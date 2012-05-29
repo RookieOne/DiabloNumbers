@@ -1,0 +1,16 @@
+
+.span4 
+  %h3 Damage Reduction from Armor
+
+  %table.table.table-striped.table-condensed
+    %tbody
+      %tr
+        %td
+          %span.label.label-inverse armor
+          = "/"
+          (
+          %span.label.label-inverse armor
+          = " + ( 50 * "
+          %span.label monster level
+          ) )
+          
