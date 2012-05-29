@@ -1,0 +1,21 @@
+.row
+  .span12
+    %h2 
+      Experience
+      %small per monster killed  
+.row
+  .span4
+    %table.table.table-striped.table-condensed
+      %thead
+        %tr
+          %th{:style => "width:150px"}
+            Monster level compared to character level            
+          %th XP gain
+      %tbody        
+        - @experience.each_pair do |name, values|
+          %tr
+            %td= name
+            %td.output_cell
+              %span #{values[:percent]}% 
+              - unless values[:per_kill]
+                %span.label no +XP/kill from gear

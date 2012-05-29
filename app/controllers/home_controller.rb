@@ -28,6 +28,22 @@ class HomeController < ApplicationController
         { :health => 430, :damage => 145 }
       ]      
     }
+
+    @experience = {
+      ">= +3" => { :percent => 125, :per_kill => true },
+      "+2" => { :percent => 120, :per_kill => true },
+      "+1" => { :percent => 115, :per_kill => true },
+      "Same level" => { :percent => 100, :per_kill => true },
+      "-1" => { :percent => 90, :per_kill => true },
+      "-2" => { :percent => 80, :per_kill => true },
+      "-3" => { :percent => 70, :per_kill => true },
+      "-4" => { :percent => 60, :per_kill => true },
+      "-5" => { :percent => 45, :per_kill => true },
+      "-6" => { :percent => 30, :per_kill => false },
+      "-7" => { :percent => 15, :per_kill => false },
+      "-8" => { :percent => 5, :per_kill => false },
+      "-9" => { :percent => 1, :per_kill => false }
+    }
   end
   
 end
